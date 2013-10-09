@@ -83,9 +83,14 @@ if has("autocmd")
 
 else
 
-  set autoindent		" always set autoindenting on
+    set autoindent		" always set autoindenting on
 
 endif " has("autocmd")
+
+"=====================================================================================
+
+noremap <Leader>f :NERDTreeToggle<CR><CR>
+let NERDTreeIgnore = ['\.o$', '\.in$', '^tags$']
 
 set number
 "colorscheme koehler
@@ -108,6 +113,11 @@ set showmatch
 set showmode
 set nowrap
 execute pathogen#infect()
+
+
+"=======================================================================================
+
+
 
 " Convenient command to see the difference between the current buffer and the
 " file it was loaded from, thus the changes you made.
