@@ -95,6 +95,11 @@ let NERDTreeIgnore = ['\.o$', '\.in$', '^tags$']
 set number
 "colorscheme koehler
 
+"Configurando o plugin de sessoes para 
+"nao salvar ou abrir sessoas automaticamente
+let g:session_autosave='no'
+let g:session_autoload='no'
+
 "Em gui, tema light, em terminal, tema dark
 "if has('gui_running')
 "    set background=light
