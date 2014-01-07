@@ -1,14 +1,19 @@
-set nocompatible
-
-set backspace=indent,eol,start
-
+set encoding=utf-8
+set nobackup
+set noswapfile
 set history=50		" keep 50 lines of command line history
 set ruler		" show the cursor position all the time
 set showcmd		" display incomplete commands
 set incsearch		" do incremental searching
-set nobackup
-set noswapfile
 
+" For Win32 GUI: remove 't' flag from 'guioptions': no tearoff menu entries
+" let &guioptions = substitute(&guioptions, "t", "", "g")
+
+" Don't use Ex mode, use Q for formatting
+map Q gq
+
+" CTRL-U in insert mode deletes a lot.  Use CTRL-G u to first break undo,
+" so that you can undo CTRL-U after inserting a line break.
 inoremap <C-U> <C-G>u<C-U>
 
 " In many terminal emulators the mouse works just fine, thus enable it.
@@ -62,6 +67,8 @@ endif " has("autocmd")
 noremap <Leader>f :NERDTreeToggle<CR><CR>
 let NERDTreeIgnore = ['\.o$', '\.in$', '^tags$']
 
+
+"==============================
 set number
 "colorscheme koehler
 
@@ -71,11 +78,12 @@ let g:session_autosave='no'
 let g:session_autoload='no'
 
 "Em gui, tema light, em terminal, tema dark
-if has('gui_running')
-    set background=light
-else
-    set background=dark
-endif
+"if has('gui_running')
+"    set background=light
+"else
+"    set background=dark
+"endif
+set background=dark
 colorscheme solarized
 set tabstop=4
 set shiftwidth=4
