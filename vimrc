@@ -34,8 +34,8 @@ noremap <Leader>f :NERDTreeToggle<CR><CR>
 let NERDTreeIgnore = ['\.o$', '\.in$', '^tags$']
 
 "Key Remaps
-noremap <A-H> :bp<CR>
-noremap <A-L> :bn<CR>
+noremap <A-Left> :bp<CR>
+noremap <A-Right> :bn<CR>
 
 "  Pathogen
 execute pathogen#infect()
