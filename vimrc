@@ -18,6 +18,7 @@ set expandtab
 set ruler
 set nocursorline
 set colorcolumn=80
+highlight ColorColumn ctermbg=1
 set showmatch
 set showmode
 set nowrap
