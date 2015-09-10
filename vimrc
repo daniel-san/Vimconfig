@@ -27,7 +27,6 @@ NeoBundle 'Shougo/vimproc.vim', {
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'altercation/vim-colors-solarized'
-"NeoBundle 'emersonmx/vimx'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'tpope/vim-surround'
 
@@ -65,7 +64,6 @@ highlight ColorColumn ctermbg=1
 set showmatch
 set showmode
 set nowrap
-filetype plugin indent on
 syntax on
 
 "Theme
@@ -81,5 +79,3 @@ let NERDTreeIgnore = ['\.o$', '\.in$', '^tags$']
 noremap <A-Left> :bp<CR>
 noremap <A-Right> :bn<CR>
 
-"  Pathogen
-"execute pathogen#infect()
