@@ -60,7 +60,6 @@ set expandtab
 set ruler
 set nocursorline
 set colorcolumn=80
-highlight ColorColumn ctermbg=1
 set showmatch
 set showmode
 set nowrap
@@ -69,7 +68,7 @@ syntax on
 "Theme
 set background=dark
 colorscheme solarized
-
+highlight ColorColumn ctermbg=1
 "Plugins
 "  NerdTree
 noremap <Leader>f :NERDTreeToggle<CR><CR>
@@ -78,4 +77,3 @@ let NERDTreeIgnore = ['\.o$', '\.in$', '^tags$']
 "Key Remaps
 noremap <A-Left> :bp<CR>
 noremap <A-Right> :bn<CR>
-
