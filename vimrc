@@ -77,3 +77,4 @@ let NERDTreeIgnore = ['\.o$', '\.in$', '^tags$']
 "Key Remaps
 noremap <A-Left> :bp<CR>
 noremap <A-Right> :bn<CR>
+nnoremap <space><space> :vsplit<cr> :<C-u>Unite -start-insert file_rec/async<cr>
