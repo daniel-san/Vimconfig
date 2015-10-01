@@ -65,10 +65,27 @@ set showmode
 set nowrap
 syntax on
 
+" Only do this part when compiled with support for autocommands.
+if has("autocmd")
+  " Put these in an autocmd group, so that we can delete them easily.
+  augroup vimrcEx
+  au!
+
+  " When editing a file, always jump to the last known cursor position.
+  autocmd BufReadPost *
+    \ if line("'\"") > 1 && line("'\"") <= line("$") |
+    \   exe "normal! g`\"" |
+    \ endif
+
+  augroup END
+
+endif
+
 "Theme
 set background=dark
 colorscheme solarized
 highlight ColorColumn ctermbg=1
+
 "Plugins
 "  NerdTree
 noremap <Leader>f :NERDTreeToggle<CR><CR>
@@ -78,3 +95,4 @@ let NERDTreeIgnore = ['\.o$', '\.in$', '^tags$']
 noremap <A-Left> :bp<CR>
 noremap <A-Right> :bn<CR>
 nnoremap <space><space> :vsplit<cr> :<C-u>Unite -start-insert file_rec/async<cr>
+nnoremap <space>f :<C-u>Unite -start-insert file_rec/async buffer<cr>
