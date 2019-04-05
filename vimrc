@@ -24,7 +24,7 @@ set nowrap
 if has("gui_running")
   set guifont=monospace\ 13
 endif
-set linespace=13
+set linespace=16
 syntax on
 
 " Only do this part when compiled with support for autocommands.
@@ -47,3 +47,8 @@ endif
 set background=light
 colorscheme onedark
 highlight ColorColumn ctermbg=1
+
+"Plugins
+"  NerdTree
+noremap <Leader>f :NERDTreeToggle<CR><CR>
+let NERDTreeIgnore = ['\.o$', '\.in$', '^tags$']
