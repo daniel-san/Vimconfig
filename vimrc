@@ -47,6 +47,7 @@ endif
 set background=light
 colorscheme onedark
 highlight ColorColumn ctermbg=1
+highlight Normal ctermbg=none
 
 "Plugins
 "  NerdTree
