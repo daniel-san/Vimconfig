@@ -22,7 +22,7 @@ set showmatch
 set showmode
 set nowrap
 if has("gui_running")
-  set guifont=monospace\ 13
+  set guifont=mononoki\ 14
 endif
 set linespace=16
 syntax on
