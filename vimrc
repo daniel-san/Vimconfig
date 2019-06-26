@@ -49,6 +49,13 @@ colorscheme onedark
 highlight ColorColumn ctermbg=1
 highlight Normal ctermbg=none
 
+vnoremap <C-c> "*y :let @+=@*<CR>
+map <C-p> "+p
+
+"Spell checker
+map <F6> :setlocal spell! spelllang=en_us<CR>
+map <F7> :setlocal spell! spelllang=pt_br<CR>
+
 "Plugins
 "  NerdTree
 noremap <Leader>f :NERDTreeToggle<CR><CR>
